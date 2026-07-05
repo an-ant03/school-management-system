@@ -39,7 +39,7 @@ function StudentDashboard() {
   };
 
   const totalClasses = attendance.length;
-  const presentCount = attendance.filter((a) => a.status === "present").length;
+  const presentCount = attendance.filter((a) => a.status === "PRESENT").length;
   const attendancePercent =
     totalClasses > 0
       ? ((presentCount / totalClasses) * 100).toFixed(1)
@@ -182,9 +182,9 @@ function StudentDashboard() {
                     </span>
                     <span
                       className={`text-xs px-2 py-1 rounded font-medium ${
-                        a.status === "present"
+                        a.status === "PRESENT"
                           ? "bg-green-100 text-green-700"
-                          : a.status === "late"
+                          : a.status === "LATE"
                           ? "bg-yellow-100 text-yellow-700"
                           : "bg-red-100 text-red-600"
                       }`}
