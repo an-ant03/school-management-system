@@ -85,6 +85,12 @@ model Enrollment {
   @@unique([studentId, sectionId])
 }
 
+enum AttendanceStatus {
+  PRESENT
+  LATE
+  ABSENT
+}
+
 model Attendance {
   id        Int      @id @default(autoincrement())
   student   Student  @relation(fields: [studentId], references: [id])
@@ -92,7 +98,7 @@ model Attendance {
   section   Section  @relation(fields: [sectionId], references: [id])
   sectionId Int
   date      DateTime @default(now())
-  status    String   // "present", "absent", "late"
+  status    AttendanceStatus   
 }
 
 model Grade {

@@ -213,9 +213,9 @@ function TeacherDashboard() {
                         className="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
                         <option value="">Mark Attendance</option>
-                        <option value="present">Present</option>
-                        <option value="absent">Absent</option>
-                        <option value="late">Late</option>
+                        <option value="PRESENT">Present</option>
+                        <option value="ABSENT">Absent</option>
+                        <option value="LATE">Late</option>
                       </select>
                       <button
                         onClick={() => handleMarkAttendance(s.studentId)}
